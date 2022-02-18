@@ -1,0 +1,91 @@
+
+# Logging
+logging:
+  level:
+    org.apache.http: DEBUG
+    be.belfius: DEBUG
+    org.springframework: INFO
+    org.springframework.web: INFO
+    root: WARN
+
+# START Specific
+app:
+  environment: local
+  title: START Backend[local]
+mail:
+  destination:
+    bo-derivatives: ''
+    bo-fxmm: ''
+    bo-securities: ''
+    itdev: cpjjpeters@gmail.com,tersc@belfius.be
+    test: tersc@belfius.be
+user:
+  technical: cafisrta
+
+# Spring
+server:
+  port: 7777
+  servlet:
+    context-path: /start-demo
+
+spring:
+  thymeleaf:
+    cache: false
+  activemq:
+    in-memory: true
+    pool:
+      enabled: false
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:R:/databaseH2/startdb;DB_CLOSE_ON_EXIT=FALSE;
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jms:
+    cache.enabled: true    
+  jpa:
+    hibernate:
+      ddl-auto: none
+      use-new-id-generator-mappings: false
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+  mail:
+    host: internalsmtp.belwired.net
+    port: 25
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    protocol: smtp
+    username: cafisrta
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE}
+# Security
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          azure:
+#            client-id: ${belfius.application.client-id}
+#            client-secret: ${belfius.application.client-secret}
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://login.microsoftonline.com/83ba98e9-2851-416c-9d81-c0bee20bb7f3/v2.0
+#          jwk-set-uri: https://login.microsoftonline.com/83ba98e9-2851-416c-9d81-c0bee20bb7f3/discovery/keys
+#
+#---
+#spring:
+#  profiles: memdb
+#  datasource:
+#    url: jdbc:h2:mem:fisrdb;DB_CLOSE_ON_EXIT=FALSE;MODE=MSSQLServer
+
+

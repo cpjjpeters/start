@@ -1,0 +1,37 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+**/target
+**/META-INF
+**/.classpath
+**/.project
+**/.settings
+**/.DS_Store
+**/*.iml
+**/.idea
+**/.springBeans
+**/.factorypath
+
+hs_*
+replay_*
+app/src/main/resources/application-carl.properties
+app/src/main/resources/logback-spring.xml
+app/src/main/resources/mustGoInGitignore
+
