@@ -1,6 +1,6 @@
 package be.belfius.start.repository;
 
-import be.belfius.start.domain.Person;
+import be.belfius.start.person.domain.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
